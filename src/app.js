@@ -22,7 +22,13 @@ app.get("/api", (req, res) => {
 });
 
 import userRouter from "./routes/user.routes.js";
+import donorRouter from "./routes/donor.routes.js";
+import communityRouter from "./routes/community.routes.js";
+import chatRouter from "./routes/chat.routes.js";
 
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/donor", donorRouter);
+app.use("/api/v1/community", communityRouter);
+app.use("/api/v1/message", chatRouter);
 
 export { app };
